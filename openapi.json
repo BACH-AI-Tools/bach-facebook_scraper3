@@ -1,0 +1,1870 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Facebook Scraper3",
+    "version": "1.0.0",
+    "description": "RapidAPI: krasnoludkolo/facebook-scraper3"
+  },
+  "servers": [
+    {
+      "url": "https://facebook-scraper3.p.rapidapi.com"
+    }
+  ],
+  "paths": {
+    "/comment": {
+      "get": {
+        "summary": "comment by id",
+        "description": "Get comment by comment id",
+        "operationId": "comment_by_id",
+        "parameters": [
+          {
+            "name": "comment_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2815848835278004",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/people": {
+      "get": {
+        "summary": "Search people",
+        "description": "Searches people",
+        "operationId": "search_people",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: pizza",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/hashtags": {
+      "get": {
+        "summary": "Search hashtag",
+        "description": "Search posts with hashtag",
+        "operationId": "search_hashtag",
+        "parameters": [
+          {
+            "name": "hashtag",
+            "in": "query",
+            "required": true,
+            "description": "Example value: gol",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile/reels": {
+      "get": {
+        "summary": "Profile reels",
+        "description": "Get profile reels. Get `reels_profile_id` from profile details endpoint",
+        "operationId": "profile_reels",
+        "parameters": [
+          {
+            "name": "reels_profile_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: YXBwX2NvbGxlY3Rpb246cGZiaWQwUHNSMVVqTTE3a2dicGQ1VVkycEhwcGtKV2dwOFltNHpxUU53U3JCRTluUUZmQ3o0dG9tMjNLaWlTVnNzZmpNQnlDWVoxQWtjTXNlVmlveWdFeGw=",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/events/future": {
+      "get": {
+        "summary": "Page events",
+        "description": "Get all future events created by page",
+        "operationId": "page_events",
+        "parameters": [
+          {
+            "name": "page_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 100063667778486",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "collection_id",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post/reactions": {
+      "get": {
+        "summary": "Post reactions",
+        "description": "Get post reactions",
+        "operationId": "post_reactions",
+        "parameters": [
+          {
+            "name": "post_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 2253766361810327",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post/comments_nested": {
+      "get": {
+        "summary": "comments - nested",
+        "description": "Get nested comments. You need to use legacy fb id",
+        "operationId": "comments___nested",
+        "parameters": [
+          {
+            "name": "post_id",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 979891387516215",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "comment_id",
+            "in": "query",
+            "required": false,
+            "description": "legacy_comment_id",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "expansion_token",
+            "in": "query",
+            "required": false,
+            "description": "Example value: MjoxNzM3OTY2Mzk0OgF1awP-xdBTo30UnnZUyhtyeebg0jVPoVV4mPROM1cOYWTDR5SCnvo6iBi20bz8LOYiG8vLdH6MB7q-43BaIT4TuTSDOaTc6RuXysoOhSqAVJA0_WcLrgUn8XQK-RiWnu1_pzCvCo8quhTgHDUvkAVRvV-Cun1kyY3xbgsW_43rvGoObIdFqDsduFTaPu2H440xn6U9b0uKIG7HEVDuTPkjF-KUBds0l_m3DiKRhCA4frRbr1vbRG6f2Mbf4nw4yhKhjIHFe9CTXpYlvZAVf6LqF84O2167FRMyOWSR1x1YIBURLRSRL_azSdTcpPHVV3E_fUzb3nXT3aq7I3TLeHqPJp2kAU-bCas-Tq_BjcK1mQbFUPBR9R0LpNGaNRMMdFwkCouRuvktHEZa1-6maYUw",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/reels": {
+      "get": {
+        "summary": "Page reels",
+        "description": "Get page reels by page id - use reels_page_id now",
+        "operationId": "page_reels",
+        "parameters": [
+          {
+            "name": "page_id",
+            "in": "query",
+            "required": false,
+            "description": "legacy - migrate to reels_page_id",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "reels_page_id",
+            "in": "query",
+            "required": false,
+            "description": "Value used by facebook. Get it from page details endpoint",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/marketplace/details": {
+      "get": {
+        "summary": "Listing details",
+        "description": "Get listing details",
+        "operationId": "listing_details",
+        "parameters": [
+          {
+            "name": "listing_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 750003161080442",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/marketplace/search": {
+      "get": {
+        "summary": "Search",
+        "description": "Search marketplace. Use cursor to get next page",
+        "operationId": "search",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: pizza",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "lat",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 40.7128",
+            "schema": {
+              "type": "string",
+              "default": "40.7128",
+              "enum": null
+            }
+          },
+          {
+            "name": "lng",
+            "in": "query",
+            "required": true,
+            "description": "Example value: -74.006",
+            "schema": {
+              "type": "string",
+              "default": "-74.006",
+              "enum": null
+            }
+          },
+          {
+            "name": "price_min",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": "0",
+              "enum": null
+            }
+          },
+          {
+            "name": "price_max",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": "0",
+              "enum": null
+            }
+          },
+          {
+            "name": "radius_km",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": "0",
+              "enum": null
+            }
+          },
+          {
+            "name": "condition",
+            "in": "query",
+            "required": false,
+            "description": "used_like_new , used_good, used_fair , new Can be combined with coma, for example: used_like_new,used_good",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "description": "cars, boats etc.",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post/comments": {
+      "get": {
+        "summary": "comments",
+        "description": "Get post comments. Use comment_id from post",
+        "operationId": "comments",
+        "parameters": [
+          {
+            "name": "post_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: pfbid02BzYRNmoznsZjci5FuztPUb9mKd9ameNVYSBweaBEvb8oEzSMjcs8nbXnMkYA5Benl",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/groups_posts": {
+      "get": {
+        "summary": "Search groups posts",
+        "description": "Searches group for posts",
+        "operationId": "search_groups_posts",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: Be my friend",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "group_id",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 137206643664121",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/videos": {
+      "get": {
+        "summary": "Page videos",
+        "description": "Get page videos by page delegate id.  YOU NEED TO USE DELEGATE ID, NOT PAGE ID.",
+        "operationId": "page_videos",
+        "parameters": [
+          {
+            "name": "delegate_page_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 20531316728",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/photos": {
+      "get": {
+        "summary": "Pages photos",
+        "description": "Read page photos (from recent)  Use cursor to get next page of results",
+        "operationId": "pages_photos",
+        "parameters": [
+          {
+            "name": "page_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 100064830872783",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "collection_id",
+            "in": "query",
+            "required": false,
+            "description": "Required with cursor. Obtain from first response",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/posts": {
+      "get": {
+        "summary": "Pages posts",
+        "description": "Read page posts (from recent)",
+        "operationId": "pages_posts",
+        "parameters": [
+          {
+            "name": "page_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 100064860875397",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/details": {
+      "get": {
+        "summary": "Page details",
+        "description": "Read page details",
+        "operationId": "page_details",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: https://www.facebook.com/facebook",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/events/past": {
+      "get": {
+        "summary": "Page past events",
+        "description": "Get all past events created by page. Use cursor to get next page of results.",
+        "operationId": "page_past_events",
+        "parameters": [
+          {
+            "name": "page_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 100063667778486",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "collection_id",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/group/posts": {
+      "get": {
+        "summary": "get group posts",
+        "description": "Get group posts.  Only PUBLIC groups can be scrapped! If there are no post response, check if group is not private.",
+        "operationId": "get_group_posts",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1439220986320043",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "sorting_order",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/group/future_events": {
+      "get": {
+        "summary": "get group future events",
+        "description": "Get group future events.  Only PUBLIC groups can be scrapped! If there are no post response, check if group is not private. Use cursor to get next page of events!",
+        "operationId": "get_group_future_events",
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1571965316444595",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/events": {
+      "get": {
+        "summary": "Search events",
+        "description": "Searches for facebook events",
+        "operationId": "search_events",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: beer",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "location_uid",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gaming/live": {
+      "get": {
+        "summary": "Game lives",
+        "description": "Get game live videos Use cursor to get next page.",
+        "operationId": "game_lives",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1494097103958822",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "sort_order",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gaming/games": {
+      "get": {
+        "summary": "Browse games",
+        "description": "Browse games.  Use empty query for browse all games. Use cursor to get next page.",
+        "operationId": "browse_games",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value:  ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "sort_order",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/reviews": {
+      "get": {
+        "summary": "Page reviews",
+        "description": "Get page reviews. Use cursor to get next page",
+        "operationId": "page_reviews",
+        "parameters": [
+          {
+            "name": "page_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 100063543614476",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/videos": {
+      "get": {
+        "summary": "Search video",
+        "description": "Performs facebook videos search",
+        "operationId": "search_video",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: facebook",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "recent_videos",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "location_uid",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile/posts": {
+      "get": {
+        "summary": "Profile posts",
+        "description": "Read profile posts (from recent), if public",
+        "operationId": "profile_posts",
+        "parameters": [
+          {
+            "name": "profile_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 4",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/event/details_id": {
+      "get": {
+        "summary": "Events details by id",
+        "description": "Get events details by event id",
+        "operationId": "events_details_by_id",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 1259800548576578",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/locations": {
+      "get": {
+        "summary": "locations",
+        "description": "Search for facebook locations id. If you get strange results, try add country to query and/or try without diacritic",
+        "operationId": "locations",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/posts": {
+      "get": {
+        "summary": "Search post",
+        "description": "Performs facebook posts search",
+        "operationId": "search_post",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: facebook",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "recent_posts",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "location_uid",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/event/details": {
+      "get": {
+        "summary": "Events details by url",
+        "description": "Get events details",
+        "operationId": "events_details_by_url",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: https://www.facebook.com/events/456725590572335",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile/details_id": {
+      "get": {
+        "summary": "Profiles details by id",
+        "description": "Get profiles details by id",
+        "operationId": "profiles_details_by_id",
+        "parameters": [
+          {
+            "name": "profile_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile/details_url": {
+      "get": {
+        "summary": "Profile details by url",
+        "description": "Get profile details by url",
+        "operationId": "profile_details_by_url",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile/profile_id": {
+      "get": {
+        "summary": "Profile id",
+        "description": "Get profile id by url",
+        "operationId": "profile_id",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post": {
+      "get": {
+        "summary": "get post details",
+        "description": "Get post details by url or post id. If both are set, post id is used.",
+        "operationId": "get_post_details",
+        "parameters": [
+          {
+            "name": "post_id",
+            "in": "query",
+            "required": false,
+            "description": "Example value: pfbid04KTWEM9Rri6Wg3oLRBF5FUUvfPebQ6ZJRwVivymc8e8KWvy3RsnpUXyppjEZqkwZl",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "post_url",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/group/details": {
+      "get": {
+        "summary": "get group details",
+        "description": "Get group summary",
+        "operationId": "get_group_details",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: https://www.facebook.com/groups/gieldagryplanszowe",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/group/id": {
+      "get": {
+        "summary": "get group id",
+        "description": "Getting group facebook id",
+        "operationId": "get_group_id",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: https://www.facebook.com/groups/gieldagryplanszowe",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/page/page_id": {
+      "get": {
+        "summary": "Page id",
+        "description": "get page id from url",
+        "operationId": "page_id",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "Example value: https://facebook.com/facebook",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post/share": {
+      "get": {
+        "summary": "reshares",
+        "description": "Get post reshares",
+        "operationId": "reshares",
+        "parameters": [
+          {
+            "name": "post_id",
+            "in": "query",
+            "required": false,
+            "description": "use share_id from post details",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/places": {
+      "get": {
+        "summary": "Search place",
+        "description": "Search for fb place",
+        "operationId": "search_place",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: pizza",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "location_uid",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/pages": {
+      "get": {
+        "summary": "Search pages",
+        "description": "Searches for facebook pages",
+        "operationId": "search_pages",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: beer",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "location_uid",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-RapidAPI-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiAuth": []
+    }
+  ]
+}

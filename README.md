@@ -30,7 +30,7 @@
 
 ## 简介
 
-这是一个使用 [FastMCP](https://fastmcp.wiki) 自动生成的 MCP 服务器，用于访问 Facebook Scraper3 API。
+这是一个 MCP 服务器，用于访问 Facebook Scraper3 API。
 
 - **PyPI 包名**: `bach-facebook_scraper3`
 - **版本**: 1.0.0
@@ -108,8 +108,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "facebook_scraper3": {
-      "command": "python",
-      "args": ["E:\path\to\facebook_scraper3\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-facebook_scraper3", "bach_facebook_scraper3"],
       "env": {
         "API_KEY": "your_api_key_here"
       }
@@ -875,7 +875,6 @@ Searches for facebook pages
 
 ## 技术栈
 
-- **FastMCP**: 快速、Pythonic 的 MCP 服务器框架
 - **传输协议**: stdio
 - **HTTP 客户端**: httpx
 
